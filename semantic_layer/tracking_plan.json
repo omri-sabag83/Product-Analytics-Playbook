@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cosmetics store event (tracking plan, Module 1)",
+  "description": "One schema for the four logged events. Event names follow Object + Action; the raw log's names are kept as the enum values so raw rows can be checked as they are. When each event fires and which code sends it are not documented in the source, so the plan does not state them.",
+  "events": {
+    "view": "Product Viewed",
+    "cart": "Product Added to Cart",
+    "remove_from_cart": "Product Removed from Cart",
+    "purchase": "Order Line Purchased"
+  },
+  "type": "object",
+  "required": [
+    "event_time",
+    "event_type",
+    "product_id",
+    "category_id",
+    "price",
+    "user_id",
+    "user_session"
+  ],
+  "properties": {
+    "event_time": {
+      "type": "string",
+      "description": "UTC timestamp, to the second"
+    },
+    "event_type": {
+      "enum": [
+        "view",
+        "cart",
+        "remove_from_cart",
+        "purchase"
+      ]
+    },
+    "product_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "category_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "category_code": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "optional: human-readable category path"
+    },
+    "brand": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "optional: not every product has a brand"
+    },
+    "price": {
+      "type": "number",
+      "minimum": 0,
+      "description": "unit price; never negative"
+    },
+    "user_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "user_session": {
+      "type": "string",
+      "minLength": 1,
+      "description": "session id; every event belongs to a session"
+    }
+  },
+  "if": {
+    "properties": {
+      "event_type": {
+        "const": "purchase"
+      }
+    }
+  },
+  "then": {
+    "properties": {
+      "price": {
+        "exclusiveMinimum": 0
+      }
+    }
+  },
+  "plan_level_rules": [
+    "Each user action is logged once: no two identical rows (needs an event_id to enforce; the log has none).",
+    "All lines of one order share one order_id (the log has none; orders are rebuilt as user + session + second)."
+  ]
+}

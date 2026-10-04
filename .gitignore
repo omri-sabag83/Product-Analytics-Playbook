@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+PLAN.md
+
+# Source data is "Data files © Original Authors" (Kaggle): never committed.
+# Download it yourself; data/get_data.py verifies and samples it.
+data/raw/
+data/processed/
+
+# Local build helpers (notebook editing, number checks)
+_build/

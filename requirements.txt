@@ -1,0 +1,10 @@
+# Tested env: conda base, Python 3.13.5.
+# Elsewhere: conda create -n product_analytics_playbook python=3.13 && pip install -r requirements.txt
+# Pins are added only as modules actually use a package.
+pandas==2.2.3
+numpy==2.1.3
+matplotlib==3.10.0
+pyarrow==19.0.0
+jsonschema==4.23.0
+ipykernel==6.29.5
+nbconvert==7.16.6

@@ -1,0 +1,45 @@
+{
+  "description": "Metric definitions (Module 1). Each metric is written once and computed by common.metric(). {where} is replaced by the period filter on event_date.",
+  "metrics": {
+    "active_users": {
+      "definition": "Distinct users with at least one clean event (any type) in the period.",
+      "sql": "SELECT COUNT(DISTINCT user_id) FROM events_clean WHERE {where}"
+    },
+    "buyers": {
+      "definition": "Distinct users with at least one order in the period.",
+      "sql": "SELECT COUNT(DISTINCT user_id) FROM orders WHERE {where}"
+    },
+    "orders": {
+      "definition": "Number of orders (user + session + timestamp groups of purchase lines).",
+      "sql": "SELECT COUNT(*) FROM orders WHERE {where}"
+    },
+    "order_lines": {
+      "definition": "Number of purchased product lines (clean purchase events).",
+      "sql": "SELECT COUNT(*) FROM events_clean WHERE event_type = 'purchase' AND {where}"
+    },
+    "revenue": {
+      "definition": "Gross revenue: sum of unit price over purchased lines (the log has no quantity; one line = one unit, an assumption).",
+      "sql": "SELECT SUM(price) FROM events_clean WHERE event_type = 'purchase' AND {where}"
+    },
+    "net_revenue": {
+      "definition": "Revenue minus refund candidates (negative-price purchase rows, assumed to be refunds).",
+      "sql": "SELECT (SELECT SUM(price) FROM events_clean WHERE event_type = 'purchase' AND {where}) + (SELECT COALESCE(SUM(price), 0) FROM refund_candidates WHERE {where})"
+    },
+    "aov": {
+      "definition": "Average order value: revenue / orders.",
+      "sql": "SELECT SUM(revenue) * 1.0 / COUNT(*) FROM orders WHERE {where}"
+    },
+    "payer_rate": {
+      "definition": "Buyers / active users in the same period.",
+      "sql": "SELECT (SELECT COUNT(DISTINCT user_id) FROM orders WHERE {where}) * 1.0 / (SELECT COUNT(DISTINCT user_id) FROM events_clean WHERE {where})"
+    },
+    "cart_adds": {
+      "definition": "Clean 'Product Added to Cart' events.",
+      "sql": "SELECT COUNT(*) FROM events_clean WHERE event_type = 'cart' AND {where}"
+    },
+    "cart_removals": {
+      "definition": "Clean 'Product Removed from Cart' events. Unreliable: 11.41% of (user, product) pairs remove a product not in the cart at some point, even after cleaning (Module 1); use for monitoring only, not conclusions.",
+      "sql": "SELECT COUNT(*) FROM events_clean WHERE event_type = 'remove_from_cart' AND {where}"
+    }
+  }
+}

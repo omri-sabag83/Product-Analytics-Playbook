@@ -12,7 +12,7 @@ The program, progress table and per-module detail are in
 | # | Notebook | Topic | Depth |
 |---|----------|-------|-------|
 | 1 | `01_instrumentation_semantic_layer.ipynb` | Event-log audit, tracking plan, semantic layer | Full |
-| 2 | — | Metrics frameworks: North Star, HEART, AARRR, OKRs | Full |
+| 2 | `02_metrics_frameworks.ipynb` | Metrics frameworks: North Star, HEART, AARRR, OKRs | Full |
 | 3 | — | Funnel analysis | Recap |
 | 4 | — | Activation | Recap |
 | 5 | — | Retention & cohorts | Recap |

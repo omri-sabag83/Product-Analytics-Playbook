@@ -22,14 +22,14 @@ only k-means clustering (Module 9) is new.
 
 ## Progress
 
-`🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜` **10% complete (1/10 modules)**
+`🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜` **20% complete (2/10 modules)**
 
 ⬜ Not started · 🟨 In progress · 🟩 Completed
 
 | # | Module | Depth | Status | Completed On |
 |---|--------|-------|--------|---------------|
 | 1 | Event Instrumentation & the Semantic Layer | Full | 🟩 Completed | 2026-10-04 |
-| 2 | Metrics Frameworks: North Star, HEART, AARRR, OKRs | Full | ⬜ Not started | |
+| 2 | Metrics Frameworks: North Star, HEART, AARRR, OKRs | Full | 🟩 Completed | 2026-10-05 |
 | 3 | Funnel Analysis | Recap | ⬜ Not started | |
 | 4 | Activation: Definition & Measurement | Recap | ⬜ Not started | |
 | 5 | Retention & Cohorts | Recap | ⬜ Not started | |
@@ -152,14 +152,14 @@ different DAU (Daily Active Users) numbers. What do you do?"
 - What each framework is for, what each misses, and when to pick which
 
 **Why it matters**
-"What metrics would you track for X?" is the most common product-analyst
+"What metrics would you track for X?" is a standard product-analyst
 interview question. Frameworks give a structured answer and expose blind
-spots. Picking metrics no framework would flag as gaps is how teams optimise
-the wrong thing.
+spots. Without one, teams pick metrics with blind spots they don't notice, and
+optimise the wrong thing.
 
 **Worked example**
-Each framework applied to the running dataset with real numbers: a North Star
-candidate and its input tree; HEART with honest "no signal in this data" cells
+Each framework applied to the cosmetics-store event log with real numbers: a North Star
+candidate and its input tree; HEART with "no data" cells
 (no Happiness data exists); AARRR stages computed where the log supports them
 (no Acquisition source, no Referral event). Recapped as one example: the
 Product Analytics Case Study's applied primary metric (Week-2 Activation Rate,

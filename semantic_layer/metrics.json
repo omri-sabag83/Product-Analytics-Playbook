@@ -40,6 +40,10 @@
     "cart_removals": {
       "definition": "Clean 'Product Removed from Cart' events. Unreliable: 11.41% of (user, product) pairs remove a product not in the cart at some point, even after cleaning (Module 1); use for monitoring only, not conclusions.",
       "sql": "SELECT COUNT(*) FROM events_clean WHERE event_type = 'remove_from_cart' AND {where}"
+    },
+    "new_users": {
+      "definition": "Users whose first clean event in the data falls in the period. Not meaningful for October 2019: the data starts then, so everyone looks new (Module 2).",
+      "sql": "SELECT COUNT(*) FROM (SELECT user_id, MIN(event_date) AS event_date FROM events_clean GROUP BY user_id) WHERE {where}"
     }
   }
 }

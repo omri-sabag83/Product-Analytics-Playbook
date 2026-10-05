@@ -106,6 +106,45 @@ def query(con: sqlite3.Connection, sql: str) -> pd.DataFrame:
     return pd.read_sql_query(sql, con)
 
 
+def funnel_chart(stages: pd.Series, title: str, base: str, no_data: list | None = None) -> None:
+    """Funnel in the playbook's style (first used in Module 2).
+
+    stages: ordered counts, index = stage names. base: name of the first stage's unit,
+    used in "% of <base>". no_data: extra stage names shown as "no data".
+    """
+    from matplotlib.patches import Polygon
+    no_data = no_data or []
+    n = len(stages) + len(no_data)
+    fig = plt.figure(figsize=(7.5, 0.8 + 0.85 * n))
+    ax = fig.add_axes([0.02, 0.05, 0.96, 0.85])
+    ramp = ["#184f95", "#2a78d6", "#6da7ec", "#b7d3f6"]
+    top = stages.iloc[0]
+    widths = [max(v / top, 0.06) for v in stages.values]
+    h, gap = 0.8, 0.35
+    for k, ((name, v), w) in enumerate(zip(stages.items(), widths)):
+        y0 = -k * (h + gap)
+        ax.add_patch(plt.Rectangle((-w / 2, y0 - h), w, h, color=ramp[k % len(ramp)]))
+        ax.text(-0.53, y0 - h / 2, name, ha="right", va="center", fontsize=9, color="#333333")
+        prev = "" if k == 0 else f"\n{v / stages.iloc[k - 1]:.2%} of previous step"
+        label = f"{v:,}\n{v / top:.2%} of {base}{prev}"
+        if w >= 0.6:
+            ax.text(0, y0 - h / 2, label, ha="center", va="center", fontsize=9, color="white", fontweight="bold")
+        else:
+            ax.text(w / 2 + 0.02, y0 - h / 2, label, ha="left", va="center", fontsize=9, color="#222222", fontweight="bold")
+        if k < len(stages) - 1:
+            wn = widths[k + 1]
+            ax.add_patch(Polygon([(-w / 2, y0 - h), (w / 2, y0 - h), (wn / 2, y0 - h - gap), (-wn / 2, y0 - h - gap)],
+                                 color="#e4e4e0"))
+    for j, name in enumerate(no_data):
+        y0 = -(len(stages) + j) * (h + gap)
+        ax.text(-0.53, y0 - h / 2, name, ha="right", va="center", fontsize=9, color="#333333")
+        ax.text(0, y0 - h / 2, "no data", ha="center", va="center", fontsize=9, color="#555555", style="italic")
+    ax.set_xlim(-1.05, 0.55); ax.set_ylim(-n * (h + gap) + gap - 0.05, 0.05)
+    ax.axis("off")
+    ax.set_title(title, fontsize=10, loc="left")
+    plt.show()
+
+
 def show(df: pd.DataFrame, index: bool = False) -> None:
     """Print a table with text columns left-aligned and numeric columns right-aligned."""
     import re

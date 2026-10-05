@@ -21,21 +21,8 @@ BLUE, ORANGE, AQUA, GREY = "#2a78d6", "#eb6834", "#1baf7a", "#888888"
 plt.rcParams.update({"axes.spines.top": False, "axes.spines.right": False,
                      "axes.grid": True, "grid.alpha": 0.25, "figure.dpi": 110})
 
-# Every chart gets a thin black frame around the whole figure, so it stands out on a
-# white page (e.g. GitHub). Drawn as a figure-level rectangle so tight cropping keeps it.
-import matplotlib.figure as _mfig
-from matplotlib.patches import Rectangle as _Rectangle
-
-_figure_init = _mfig.Figure.__init__
-
-
-def _framed_figure_init(self, *args, **kwargs):
-    _figure_init(self, *args, **kwargs)
-    self.patches.append(_Rectangle((0, 0), 1, 1, transform=self.transFigure, fill=False, edgecolor="black",
-                                   linewidth=1.2, zorder=1000, figure=self))
-
-
-_mfig.Figure.__init__ = _framed_figure_init
+# Every chart image gets a thin black frame (shared with the other repos: chart_style.py).
+import chart_style  # noqa: E402,F401
 
 
 def load_events() -> pd.DataFrame:

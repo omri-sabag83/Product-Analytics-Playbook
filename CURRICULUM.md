@@ -22,7 +22,7 @@ only k-means clustering (Module 9) is new.
 
 ## Progress
 
-`🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜` **40% complete (4/10 modules)**
+`🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜` **50% complete (5/10 modules)**
 
 ⬜ Not started · 🟨 In progress · 🟩 Completed
 
@@ -32,7 +32,7 @@ only k-means clustering (Module 9) is new.
 | 2 | Metrics Frameworks: North Star, HEART, AARRR, OKRs | Full | 🟩 Completed | 2026-10-05 |
 | 3 | Funnel Analysis | Recap | 🟩 Completed | 2026-10-05 |
 | 4 | Activation: Definition & Measurement | Recap | 🟩 Completed | 2026-10-05 |
-| 5 | Retention & Cohorts | Recap | ⬜ Not started | |
+| 5 | Retention & Cohorts | Recap | 🟩 Completed | 2026-10-06 |
 | 6 | Engagement: DAU/MAU Stickiness | Recap | ⬜ Not started | |
 | 7 | Feature Adoption | Recap | ⬜ Not started | |
 | 8 | Monetization Metrics | Full | ⬜ Not started | |

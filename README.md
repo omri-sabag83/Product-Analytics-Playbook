@@ -15,7 +15,7 @@ The program, progress table and per-module detail are in
 | 2 | `02_metrics_frameworks.ipynb` | Metrics frameworks: North Star, HEART, AARRR, OKRs | Full |
 | 3 | `03_funnel_analysis.ipynb` | Funnel analysis | Recap |
 | 4 | `04_activation.ipynb` | Activation | Recap |
-| 5 | — | Retention & cohorts | Recap |
+| 5 | `05_retention_cohorts.ipynb` | Retention & cohorts | Recap |
 | 6 | — | Engagement: DAU/MAU stickiness | Recap |
 | 7 | — | Feature adoption | Recap |
 | 8 | — | Monetization metrics | Full |

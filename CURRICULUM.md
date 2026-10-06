@@ -22,7 +22,7 @@ only k-means clustering (Module 9) is new.
 
 ## Progress
 
-`🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜` **60% complete (6/10 modules)**
+`🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜` **70% complete (7/10 modules)**
 
 ⬜ Not started · 🟨 In progress · 🟩 Completed
 
@@ -34,7 +34,7 @@ only k-means clustering (Module 9) is new.
 | 4 | Activation: Definition & Measurement | Recap | 🟩 Completed | 2026-10-05 |
 | 5 | Retention & Cohorts | Recap | 🟩 Completed | 2026-10-06 |
 | 6 | Engagement: DAU/MAU Stickiness | Recap | 🟩 Completed | 2026-10-06 |
-| 7 | Feature Adoption | Recap | ⬜ Not started | |
+| 7 | Feature Adoption | Recap | 🟩 Completed | 2026-10-06 |
 | 8 | Monetization Metrics | Full | ⬜ Not started | |
 | 9 | Segmentation: The Methodology Landscape | Full | ⬜ Not started | |
 | 10 | Metric-Movement Diagnosis | Full | ⬜ Not started | |
@@ -257,7 +257,8 @@ definition (Module 1).
 of volume?"
 
 **Recap:** adoption (share of users who ever use it) vs. usage share (share of
-activity), and mix vs. volume.
+activity), and mix vs. volume (how activity splits across features vs. how much
+activity there is).
 
 **Compact recompute:** adoption vs. usage share on the running dataset's
 nearest "feature" dimension.

@@ -16,7 +16,7 @@ The program, progress table and per-module detail are in
 | 3 | `03_funnel_analysis.ipynb` | Funnel analysis | Recap |
 | 4 | `04_activation.ipynb` | Activation | Recap |
 | 5 | `05_retention_cohorts.ipynb` | Retention & cohorts | Recap |
-| 6 | — | Engagement: DAU/MAU stickiness | Recap |
+| 6 | `06_engagement_dau_mau.ipynb` | Engagement: DAU/MAU stickiness | Recap |
 | 7 | — | Feature adoption | Recap |
 | 8 | — | Monetization metrics | Full |
 | 9 | — | Segmentation: rule-based, RFM, clustering | Full |

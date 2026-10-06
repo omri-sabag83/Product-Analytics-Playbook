@@ -22,7 +22,7 @@ only k-means clustering (Module 9) is new.
 
 ## Progress
 
-`🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜` **50% complete (5/10 modules)**
+`🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜` **60% complete (6/10 modules)**
 
 ⬜ Not started · 🟨 In progress · 🟩 Completed
 
@@ -33,7 +33,7 @@ only k-means clustering (Module 9) is new.
 | 3 | Funnel Analysis | Recap | 🟩 Completed | 2026-10-05 |
 | 4 | Activation: Definition & Measurement | Recap | 🟩 Completed | 2026-10-05 |
 | 5 | Retention & Cohorts | Recap | 🟩 Completed | 2026-10-06 |
-| 6 | Engagement: DAU/MAU Stickiness | Recap | ⬜ Not started | |
+| 6 | Engagement: DAU/MAU Stickiness | Recap | 🟩 Completed | 2026-10-06 |
 | 7 | Feature Adoption | Recap | ⬜ Not started | |
 | 8 | Monetization Metrics | Full | ⬜ Not started | |
 | 9 | Segmentation: The Methodology Landscape | Full | ⬜ Not started | |

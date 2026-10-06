@@ -18,7 +18,7 @@ The program, progress table and per-module detail are in
 | 5 | `05_retention_cohorts.ipynb` | Retention & cohorts | Recap |
 | 6 | `06_engagement_dau_mau.ipynb` | Engagement: DAU/MAU stickiness | Recap |
 | 7 | `07_feature_adoption.ipynb` | Feature adoption | Recap |
-| 8 | — | Monetization metrics | Full |
+| 8 | `08_monetization.ipynb` | Monetization metrics | Full |
 | 9 | — | Segmentation: rule-based, RFM, clustering | Full |
 | 10 | — | Metric-movement diagnosis | Full |
 

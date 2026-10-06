@@ -35,7 +35,7 @@ only k-means clustering (Module 9) is new.
 | 5 | Retention & Cohorts | Recap | 🟩 Completed | 2026-10-06 |
 | 6 | Engagement: DAU/MAU Stickiness | Recap | 🟩 Completed | 2026-10-06 |
 | 7 | Feature Adoption | Recap | 🟩 Completed | 2026-10-06 |
-| 8 | Monetization Metrics | Full | ⬜ Not started | |
+| 8 | Monetization Metrics | Full | 🟩 Completed | 2026-10-06 |
 | 9 | Segmentation: The Methodology Landscape | Full | ⬜ Not started | |
 | 10 | Metric-Movement Diagnosis | Full | ⬜ Not started | |
 
@@ -291,7 +291,11 @@ prices call for different responses.
 The identity computed month by month on the running dataset, with each month's
 change split into its four factors; cohort LTV curves; a concentration curve.
 
-**Resources:** to be verified when the module is built.
+**Resources**
+- [16 Startup Metrics](https://a16z.com/16-startup-metrics/)
+  (Jordan, Hariharan, Chen & Kasireddy, Andreessen Horowitz, 2015, ~20 min,
+  verified): #5 on LTV and its common mistakes; #14 on why cumulative charts
+  always look good.
 
 **Exercise type:** fully worked: "revenue rose X% this month; which factor
 drove it?"

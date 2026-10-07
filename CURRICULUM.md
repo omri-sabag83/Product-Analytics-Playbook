@@ -22,7 +22,7 @@ only k-means clustering (Module 9) is new.
 
 ## Progress
 
-`🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜` **70% complete (7/10 modules)**
+`🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜` **90% complete (9/10 modules)**
 
 ⬜ Not started · 🟨 In progress · 🟩 Completed
 
@@ -36,7 +36,7 @@ only k-means clustering (Module 9) is new.
 | 6 | Engagement: DAU/MAU Stickiness | Recap | 🟩 Completed | 2026-10-06 |
 | 7 | Feature Adoption | Recap | 🟩 Completed | 2026-10-06 |
 | 8 | Monetization Metrics | Full | 🟩 Completed | 2026-10-06 |
-| 9 | Segmentation: The Methodology Landscape | Full | ⬜ Not started | |
+| 9 | Segmentation: The Methodology Landscape | Full | 🟩 Completed | 2026-10-07 |
 | 10 | Metric-Movement Diagnosis | Full | ⬜ Not started | |
 
 ---
@@ -333,7 +333,9 @@ stability check.
 - [RFM and CLV: Using Iso-Value Curves for Customer Base Analysis](https://brucehardie.com/abstracts/abstract-fhl_rfm_clv_2005-02.html)
   (Fader, Hardie & Lee, *Journal of Marketing Research* 42(4), 2005; abstract
   page, verified).
-- k-means: verified when the module is built.
+- [scikit-learn User Guide: Clustering](https://scikit-learn.org/stable/modules/clustering.html)
+  (verified): sections "2.3.2. K-means", "2.3.11.1. Rand index" (including the
+  adjusted Rand index) and "2.3.11.5. Silhouette Coefficient".
 
 **Exercise type:** fully worked: turn a cluster table into named personas, and
 say which ones a seed change breaks.

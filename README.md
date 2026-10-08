@@ -45,7 +45,7 @@ conda activate base                 # tested env: Python 3.13.5, versions in req
 # 1. download the five monthly CSVs from the Kaggle page above (free account) into data/raw/
 python data/get_data.py             # checks SHA-256 checksums, writes a fixed 10% user sample
                                     # and data/processed/playbook.sqlite for the queries in SQL/
-jupyter nbconvert --to notebook --execute --inplace 0*.ipynb
+jupyter nbconvert --to notebook --execute --inplace *.ipynb
 ```
 
 The sample is chosen by a fixed hash of `user_id`, so it is identical on every

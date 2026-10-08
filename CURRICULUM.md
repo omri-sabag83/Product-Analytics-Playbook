@@ -22,7 +22,7 @@ only k-means clustering (Module 9) is new.
 
 ## Progress
 
-`🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜` **90% complete (9/10 modules)**
+`🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩` **100% complete (10/10 modules)**
 
 ⬜ Not started · 🟨 In progress · 🟩 Completed
 
@@ -37,7 +37,7 @@ only k-means clustering (Module 9) is new.
 | 7 | Feature Adoption | Recap | 🟩 Completed | 2026-10-06 |
 | 8 | Monetization Metrics | Full | 🟩 Completed | 2026-10-06 |
 | 9 | Segmentation: The Methodology Landscape | Full | 🟩 Completed | 2026-10-07 |
-| 10 | Metric-Movement Diagnosis | Full | ⬜ Not started | |
+| 10 | Metric-Movement Diagnosis | Full | 🟩 Completed | 2026-10-08 |
 
 ---
 
@@ -350,7 +350,7 @@ say which ones a seed change breaks.
 question, it uses Modules 1–9 together, and no earlier repo covers it.
 
 **Concepts**
-- A fixed order of checks: is it real (instrumentation, Module 1), is it the
+- A fixed order of checks: is the data right (instrumentation, Module 1), is it the
   calendar, is it mix or rate, where is it (segment, funnel step)
 - Rate-vs-mix decomposition: splitting a change into "groups changed size"
   and "groups changed behaviour"
@@ -358,7 +358,7 @@ question, it uses Modules 1–9 together, and no earlier repo covers it.
 
 **Why it matters**
 "Metric X dropped 8% yesterday, why?" is asked in nearly every product-analyst
-loop and in real jobs every week. A structured answer that checks the logging
+interview and in real jobs every week. A structured answer that checks the logging
 first saves days of chasing a bug as if it were user behaviour.
 
 **Worked example**
@@ -366,7 +366,10 @@ A real movement in the running dataset, worked through the checklist (first
 case: the February 2020 surge in zero-price cart events found in Module 1),
 plus a simulated case with a planted logging bug as known ground truth.
 
-**Resources:** to be verified when the module is built.
+**Resources**
+- [Simpson's paradox](https://en.wikipedia.org/wiki/Simpson%27s_paradox)
+  (Wikipedia, verified): the extreme case of mix vs. rate, where a trend in
+  every group reverses once the groups are combined.
 
 **Exercise type:** fully worked diagnosis memos.
 

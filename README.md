@@ -20,7 +20,7 @@ The program, progress table and per-module detail are in
 | 7 | `07_feature_adoption.ipynb` | Feature adoption | Recap |
 | 8 | `08_monetization.ipynb` | Monetization metrics | Full |
 | 9 | `09_segmentation.ipynb` | Segmentation: rule-based, RFM, clustering | Full |
-| 10 | — | Metric-movement diagnosis | Full |
+| 10 | `10_metric_diagnosis.ipynb` | Metric-movement diagnosis | Full |
 
 Related repos: [A/B Testing Playbook](https://github.com/omri-sabag83/A-B-Testing-Playbook),
 [Product Analytics Case Study](https://github.com/omri-sabag83/Product-Analytics-Case-Study),
